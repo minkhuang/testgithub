@@ -35,14 +35,26 @@ class ViewController: UIViewController {
                         print("輸出 key 為 url 的直")
                         print(value)
                     }
-                    if let value = dictionary["headers"] as? String{
+                    if let headers_dictionary = dictionary["headers"] as? [String:Any]{
+                        if let value = headers_dictionary["Accept"] as? String{
                         print("輸出 key 為 headers 的直")
                         print(value)
                     }
+                    }
+                    
                     if let value = dictionary["args"] as? String{
                         print("輸出 key 為 args 的直")
                         print(value)
                     }
+                    
+                    if let headers_dictionary = dictionary["headers"] as? [String:Any]{
+                        for(key,value) in headers_dictionary{
+                            if let value_string = value as? String{
+                                print(key + ":" + value_string)
+                      }
+                    }
+                  }
+               
                 }
             }
         }
