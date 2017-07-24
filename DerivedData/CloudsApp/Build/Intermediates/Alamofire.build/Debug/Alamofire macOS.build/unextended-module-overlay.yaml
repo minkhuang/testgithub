@@ -1,0 +1,13 @@
+{
+  'version': 0,
+  'case-sensitive': 'false',
+  'roots': [{
+    'type': 'directory',
+    'name': '/Users/john2/Desktop/CloudsApp/DerivedData/CloudsApp/Build/Products/Debug/Alamofire.framework/Modules'
+    'contents': [{
+      'type': 'file',
+      'name': 'module.modulemap',
+      'external-contents': '/Users/john2/Desktop/CloudsApp/DerivedData/CloudsApp/Build/Intermediates/Alamofire.build/Debug/Alamofire macOS.build/unextended-module.modulemap',
+    }]
+  }]
+}
