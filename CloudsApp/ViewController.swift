@@ -13,7 +13,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
+
         Alamofire.request("https://httpbin.org/get").responseJSON{response in
 //            print(response.request as Any)
 //            print(response.response as Any)
@@ -58,7 +58,28 @@ class ViewController: UIViewController {
                 }
             }
         }
-   }
+  
+        Alamofire.request("https://api.github.com/users/octocat/repos").responseJSON{
+            response in
+            
+            if let result_value = response.result.value{
+                if let array = result_value as? [Any]{
+                    if let JSON_OBJECT = array.first{
+                        if let dictionry = JSON_OBJECT as? [String:Any]{
+                            if let value = dictionry["id"] as? Int{
+                                print(" id:\(value)")
+                            }
+                        }
+                    }
+                
+                }
+            }
+        }
+        
+    
+    
+    
+    }
 
 
 
