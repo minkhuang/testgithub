@@ -31,6 +31,18 @@ class ViewController: UIViewController {
                      print("輸出 key 為 origin 的直")
                      print(value)
                     }
+                    if let value = dictionary["url"] as? String{
+                        print("輸出 key 為 url 的直")
+                        print(value)
+                    }
+                    if let value = dictionary["headers"] as? String{
+                        print("輸出 key 為 headers 的直")
+                        print(value)
+                    }
+                    if let value = dictionary["args"] as? String{
+                        print("輸出 key 為 args 的直")
+                        print(value)
+                    }
                 }
             }
         }
